@@ -5,6 +5,8 @@ import PolicyView from '../views/PolicyView.vue'
 import ContactView from '../views/ContactView.vue'
 import ContactConfirm from '../views/ContactConfirm.vue'
 
+import NotFound from '../views/NotFound.vue'
+
 
 Vue.use(VueRouter)
 
@@ -31,6 +33,10 @@ const router = new VueRouter({
       path: '/contact_confirm',
       name: 'contact_confirm',
       component: ContactConfirm
+    },
+    {
+      path: '/:pathMatch(.*)',
+      component: NotFound
     },
 
   ]
