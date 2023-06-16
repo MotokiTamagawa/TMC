@@ -30,15 +30,17 @@ export default {
 <style scoped>
 
 .app {
-  background-color: #f2f2e9;
+  background-color: #ebeae9;
   font-family: sans-serif;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  text-decoration: none;
+  color: black;
 }
 
-
 .router-view {
-  margin: 0;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 0;
 }
 
