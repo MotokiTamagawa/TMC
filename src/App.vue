@@ -1,6 +1,8 @@
 <template>
   <div class="app">
-    <HeaderView/>
+    <div class="header">
+      <HeaderView/>
+    </div>
     <div class="router-view">
       <router-view />
     </div>
@@ -36,6 +38,10 @@ export default {
   padding: 0;
   text-decoration: none;
   color: black;
+}
+
+.header {
+  width: 100%;
 }
 
 .router-view {

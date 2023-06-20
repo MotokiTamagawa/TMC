@@ -1,7 +1,7 @@
 <template>
   <div class="field-container">
 
-    <div class="contents-title-container">
+    <div class="contents-title-container" id="field">
       <div class="contents-title">FIELD</div>
       <span class="sub-title">事業内容</span>
     </div>
@@ -16,13 +16,13 @@
         </div>
 
         <div class="content-image">
-          <img src="../assets/images/inheritance.jpeg" class="content-image-detail">
+          <img src="../assets/images/inheritance.jpg" class="content-image-detail">
         </div>
       </div>
 
       <div class="field-content">
         <div class="content-image">
-          <img src="../assets/images/land.jpeg" class="content-image-detail">
+          <img src="../assets/images/land.jpg" class="content-image-detail">
         </div>
 
         <div class="content-title">
@@ -38,13 +38,13 @@
           <p>建設許可申請、競争入札参加資格審査申請（指名願い）など</p>
         </div>
         <div class="content-image">
-          <img src="../assets/images/construction.jpeg" class="content-image-detail">
+          <img src="../assets/images/construction.jpg" class="content-image-detail">
         </div>
       </div>
 
       <div class="field-content">
         <div class="content-image">
-          <img src="../assets/images/foreigner.jpeg" class="content-image-detail">
+          <img src="../assets/images/foreigner.jpg" class="content-image-detail">
         </div>
         <div class="content-title">
           外国人関係
@@ -59,16 +59,36 @@
       行政書士には守秘義務がございますので、ご安心してお気軽にご相談ください。
     </div>
 
-    <div>以前は会社経営者としてＭ＆Ａや各種契約・不動産事業を自ら行い、その経験を基に相続・契約書・事業承継・不動産活用分野を得意としております。</div>
-
-
   </div>
 </template>
+
+
+
+<script lang="js">
+import router from '../router';
+
+
+export default {
+  watch: {
+    scroll() {
+
+      let hash = this.$router.hash;
+      console.log(hash);
+
+      if (hash == 'field') {
+        this.$router.push('./#field')
+      }
+
+    }
+  }
+}
+
+</script>
 
 <style scoped>
 
 .field-container {
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 50px;
   text-align: center;
   margin: 10px;
@@ -76,6 +96,7 @@
 }
 
 .contents-title-container {
+  padding-top: 100px;
   padding-bottom: 50px;
 }
 
