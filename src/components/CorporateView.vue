@@ -1,5 +1,5 @@
 <template>
-  <div class="corporate-container">
+  <div class="corporate-container" id="corporate">
 
     <div class="contents-title-container">
       <div class="contents-title">CORPORATE</div>
@@ -67,7 +67,7 @@
 <style scoped>
 
 .corporate-container {
-  padding-top: 50px;
+  padding-top: 90px;
   padding-bottom: 50px;
   text-align: center;
   margin: 10px;

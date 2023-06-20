@@ -3,18 +3,10 @@
   <div class="home-container">
     <TopView/>
     <FieldView/>
+    <IntroductionView/>
     <CorporateView/>
-
-
-    <div>当事務所について（ABOUT OFFICE）</div>
-
-    <div>トップコンテンツ</div>
-    <div>新規事業</div>
-    <div>司法書士紹介</div>
-
-
+    <ContactContents/>
   </div>
-
 
 </template>
 
@@ -23,16 +15,18 @@
 
 import TopView from '../components/TopView.vue'
 import FieldView from '../components/FieldView.vue';
+import IntroductionView from '../components/IntroductionView.vue'
 import CorporateView from '../components/CorporateView.vue';
-
-
+import ContactContents from '../components/ContactContents.vue'
 
 
 export default {
   components: {
     TopView,
     FieldView,
-    CorporateView
+    IntroductionView,
+    CorporateView,
+    ContactContents
 
 },
   // data () {
@@ -47,7 +41,9 @@ export default {
 <style scoped>
 
 .home-container {
-  /* background-color: rgb(0, 240, 32); */
+  max-width: 1000px;
+  padding-top: 80px;
+  margin: auto;
 }
 
 

@@ -2,11 +2,11 @@
 
   <div class="top-container">
 
-    <!-- <div class="fluid"></div> -->
+    <!-- <div class="fluid1"></div> -->
 
 
     <div class="top-image">
-      <img src="../assets/images/AdobeStock_239247699.jpeg" class='image-detail'>
+      <img src="../assets/images/AdobeStock_239247699.jpg" class='image-detail'>
       <div class="top-titles">
         <p>愛媛県今治市の行政書士事務所</p>
         <h1>行政書士 寺町久徳事務所</h1>
@@ -14,7 +14,8 @@
       </div>
     </div>
 
-    <!-- https://stock.adobe.com/images/%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9/239247699?prev_url=detail -->
+
+    <!-- <div class="fluid2"></div> -->
 
   </div>
 </template>
@@ -28,6 +29,7 @@
   max-width: 1000px;
   height: auto;
   font-family:serif;
+  position: relative;
 }
 
 h1 {
@@ -60,6 +62,7 @@ p {
   position: relative;
   width: 1000px;
   height: auto;
+  z-index: 800;
 }
 
 .image-detail {
@@ -67,10 +70,24 @@ p {
 }
 
 /*========= 流体シェイプを動かす ===============*/
-.fluid {
-  width:80vh;/*横幅*/
-  height: 80vh;/*縦幅*/
-  margin: auto;
+.fluid1 {
+  width: 50vh;/*横幅*/
+  height: 50vh;/*縦幅*/
+  position: absolute;
+  top: 30px;
+  left: -300px;
+  z-index: 88;
+  background:rgb(0, 183, 79);/*背景色*/
+  animation: fluidrotate 30s ease 0s infinite;/*アニメーションの設定*/
+}
+
+.fluid2 {
+  width: 70vh;/*横幅*/
+  height: 70vh;/*縦幅*/
+  position: absolute;
+  top: 300px;
+  left: 800px;
+  z-index: 88;
   background:rgb(0, 183, 79);/*背景色*/
   animation: fluidrotate 30s ease 0s infinite;/*アニメーションの設定*/
 }

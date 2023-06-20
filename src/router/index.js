@@ -11,6 +11,15 @@ import NotFound from '../views/NotFound.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return {
+        top: 0
+      }
+    }
+  },
   mode: 'history',
   base: import.meta.env.BASE_URL,
   routes: [
@@ -38,7 +47,6 @@ const router = new VueRouter({
       path: '/:pathMatch(.*)',
       component: NotFound
     },
-
   ]
 })
 

@@ -1,97 +1,101 @@
 <template>
 
-  <div class="contact-container">
+  <div class="contact-container" id="contactview">
 
     <div class="contents-title-container">
       <div class="contents-title">CONTACT</div>
       <span class="sub-title">お問合せ</span>
     </div>
 
-    <form
-      id="app"
-      @submit.prevent="sendEmail"
-      method="post"
-      novalidate="true"
-      ref="form"
-    >
-
-    <p v-if="errors.length">
-      <b>Please correct the following error(s):</b>
-      <ul>
-        <li v-for="error in errors">{{ error }}</li>
-      </ul>
-    </p>
-
-    <p>
-      <label for="name">お名前</label>
-      <input
-        id="name"
-        v-model="name"
-        type="text"
-        name="name"
+    <div class="contact-contents">
+      <form
+        id="app"
+        @submit.prevent="sendEmail"
+        method="post"
+        novalidate="true"
+        ref="form"
       >
-    </p>
-    <div>{{ errors.name }}</div>
 
-    <p>
-      <label for="number">電話番号</label>
-      <input
-        id="number"
-        v-model="number"
-        type="text"
-        name="number"
-      >
-    </p>
-    <div>{{ errors.number }}</div>
+        <div class="input-form">
+          <label for="name">お名前</label><br>
+          <input
+            id="name"
+            v-model="name"
+            type="text"
+            name="name"
+            style="width: 90%;"
+          >
+          <div class="contents-error">{{ errors.name }}</div>
+        </div>
 
-    <p>
-      <label for="email">メールアドレス</label>
-      <input
-        id="email"
-        v-model="email"
-        type="email"
-        name="email"
-      >
-    </p>
-    <div>{{ errors.email }}</div>
+        <div class="input-form">
+          <label for="number">電話番号</label><br>
+          <input
+            id="number"
+            v-model="number"
+            type="text"
+            name="number"
+            style="width: 90%;"
+          >
+          <div class="contents-error">{{ errors.number }}</div>
+        </div>
 
-     <p>
-      <label for="item">お問合せ項目</label>
-      <select
-        id="item"
-        v-model="item"
-        name="item"
-      >
-        <option>相続関係</option>
-        <option>土地関係</option>
-        <option>建設業関係</option>
-        <option>外国人関係</option>
-        <option>その他</option>
-      </select>
-    </p>
-    <div>{{ errors.item }}</div>
+        <div  class="input-form">
+          <label for="email">メールアドレス<span class="annotetion">※メールアドレスの間違いにご注意ください</span></label>
+          <input
+            id="email"
+            v-model="email"
+            type="email"
+            name="email"
+            style="width: 90%;"
+          >
+          <div class="contents-error">{{ errors.email }}</div>
+        </div>
 
-    <p>
-      <label for="message">お問合せ内容</label>
-      <input
-        id="message"
-        v-model="message"
-        type="text"
-        name="message"
-      >
-    </p>
-    <div>{{ errors.message }}</div>
+        <div  class="input-form">
+          <label for="item">お問合せ項目</label>
+          <select
+            id="item"
+            v-model="item"
+            name="item"
+            style="width: 90%; height: 30px;"
+          >
+            <option>相続関係</option>
+            <option>土地関係</option>
+            <option>建設業関係</option>
+            <option>外国人関係</option>
+            <option>その他</option>
+          </select>
+          <div class="item-error">{{ errors.item }}</div>
+        </div>
 
-    <p>
-      <input
-        type="submit"
-        value="送信"
-      >
-    </p>
+        <div class="input-form">
+          <label for="message">お問合せ内容</label>
+          <textarea
+            id="message"
+            v-model="message"
+            type="text"
+            name="message"
+            style="  resize: none;
+                      width:90%;
+                      height:300px;"
+          ></textarea>
+          <div class="message-error">{{ errors.message }}</div>
+        </div>
 
-    </form>
+        <div class="errorMessage">{{ errorMessage }}</div>
 
-     <div>{{ errorMessage }}</div>
+        <p>
+          <input
+            type="submit"
+            value="送信"
+          >
+        </p>
+
+      </form>
+
+    </div>
+
 
   </div>
 
@@ -123,6 +127,12 @@ export default {
     errorMessage: null
     };
   },
+  mounted() {
+   const hash = this.$route.hash
+    if (hash && hash.match(/^#.+$/)) {
+     this.$scrollTo(hash)
+    }
+  },
   methods: {
     sendEmail() {
 
@@ -130,6 +140,7 @@ export default {
 
       // templateId = import.meta.env.VUE_APP_SERVICE_ID
 
+      // バリデーション
       if (this.validationCheck() === false) {
         console.log('validation NG');
         this.errorMessage = '入力内容を確認してください';
@@ -141,9 +152,6 @@ export default {
       console.log(this.name);
       console.log(this.message);
 
-      // let form = [from_name,user_name,message]
-
-      // ここでバリデーション
 
       emailjs.sendForm('service_fvmdxbf', 'template_rayolea', this.$refs.form,'4ZdXe1K6Ok5Ksc2P6')
         .then((result) => {
@@ -157,23 +165,62 @@ export default {
 
       let result = true;
 
-      if (this.number.match(/^[0-9]{2,4}-?[0-9]{2,4}-?[0-9]{3,4}$/)) {
-        this.errors.number = ''
-      } else if (!this.number == '' && !this.number.match(/^[0-9]{2,4}-?[0-9]{2,4}-?[0-9]{3,4}$/)) {
-        this.errors.number =  '入力内容を確認してください';
+      // 名前
+      if (this.name == null) {
+        this.errors.name = '入力してください';
         result = false;
-      } else if (this.number == null) {
+      } else {
+        this.errors.name = '';
+      }
+
+      // 電話番号
+      if (this.number == null) {
         this.errors.number =  '入力してください';
+        result = false;
+      } else {
+        this.errors.number =  '';
+      }
+
+      // if (this.number.match(/^[0-9]{2,4}-?[0-9]{2,4}-?[0-9]{3,4}$/)) {
+      //   this.errors.number = ''
+      // } else if (!this.number == '' && !this.number.match(/^[0-9]{2,4}-?[0-9]{2,4}-?[0-9]{3,4}$/)) {
+      //   this.errors.number =  '入力内容を確認してください';
+      //   result = false;
+      // } else if (this.number == null) {
+      //   this.errors.number =  '入力してください';
+      //   result = false;
+      // }
+
+      // メアド
+
+      if (this.email == null) {
+        this.errors.email =  '入力してください';
+        result = false;
+      } else {
+        this.errors.email =  '';
+      }
+
+      // お問合せ項目
+      if (this.item == null) {
+        this.errors.item = '選択してください';
+        result = false;
+      } else {
+        this.errors.item = '';
+      }
+
+      // お問合せ内容
+      if (this.message == null) {
+        this.errors.message = '入力してください';
+        result = false;
+      } else {
+        this.errors.message = '';
       }
 
       return result;
 
-
     }
   }
 }
-
-
 
 </script>
 
@@ -209,7 +256,8 @@ input[type=submit]:hover {
 
 .contact-container {
   text-align: center;
-  padding-top: 60px;
+  padding-top: 120px;
+  padding-bottom: 80px;
   font-family:serif;
   width: 1000px;
 }
@@ -226,6 +274,50 @@ input[type=submit]:hover {
 .sub-title {
   font-size: 20px;
   font-weight: bold;
+}
+
+.annotetion {
+  font-size: 12px;
+  color: rgb(136, 136, 136);
+}
+
+.contact-contents {
+  width: 700px;
+  margin: auto;
+}
+
+.input-form {
+  position: relative;
+  padding: 15px 0px;
+}
+
+.contents-error {
+  position: absolute;
+  top: 85px;
+  left: 40px;
+  font-size: 15px;
+  color: rgb(255, 126, 126);
+}
+
+.item-error {
+  position: absolute;
+  top: 70px;
+  left: 40px;
+  font-size: 15px;
+  color: rgb(255, 126, 126);
+}
+
+.message-error {
+  position: absolute;
+  top: 350px;
+  left: 40px;
+  font-size: 15px;
+  color: rgb(255, 126, 126);
+}
+
+.errorMessage {
+  padding: 20px;
+  color: rgb(255, 126, 126);
 }
 
 </style>
