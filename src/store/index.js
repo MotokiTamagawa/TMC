@@ -1,20 +1,9 @@
-import Vue from 'vue'
-
-import App from './App.vue'
-import Vuex from 'vuex'
-
-import router from './router'
-import VueScrollTo from 'vue-scrollto';
-import  Slide  from 'vue-burger-menu'
-
-import './assets/main.css'
-
-Vue.config.productionTip = false;
-
+import Vue from 'vue';
+import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-const store = new Vuex.Store({
+export default new Vuex.Store({
   state: {
     scrollFlag: true,
   },
@@ -22,17 +11,16 @@ const store = new Vuex.Store({
     getScrollFlag: (state) => {
       return state.scrollFlag;
     },
-
   },
   actions: {
-    chengeScrollFlag: function(context) {
-      context.commit('chengeScrollFlag')
+    chengeScrollFlag:function(context) {
+      context.commit('chengeScrollFlag');
     },
 
   },
   mutations: {
-    chengeScrollFlag: function(state) {
-      state.scrollFlag= false;
+    chengeScrollFlag:function(state) {
+      state.scrollFlag = false;
     },
   },
   modules: {
@@ -50,16 +38,3 @@ const store = new Vuex.Store({
     //   }
     // )]
 })
-
-export default store;
-
-Vue.component('slide', Slide);
-
-Vue.use(VueScrollTo);
-
-new Vue({
-  router,
-  Slide,
-  store,
-  render: (h) => h(App)
-}).$mount('#app')

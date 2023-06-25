@@ -6,7 +6,7 @@
 
 
     <div class="top-image">
-      <img src="../assets/images/AdobeStock_239247699.jpg" class='image-detail'>
+      <img src="../assets/images/AdobeStock_239247699.jpg" class='image-detail' alt="今治行政書士">
       <div class="top-titles">
         <p>愛媛県今治市の行政書士事務所</p>
         <h1>行政書士 寺町久徳事務所</h1>
@@ -115,6 +115,62 @@ p {
 84% {
     border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
 }
+
+}
+
+@media screen and (max-width: 800px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+
+  .top-container {
+    margin: auto;
+    padding-top: 70px;
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    font-family:serif;
+    position: relative;
+  }
+
+  h1 {
+    font-family:serif;
+    font-size: 25px;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .en {
+    font-size: 10px;
+  }
+
+  .top-titles {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+    color: rgb(0, 0, 0);
+  }
+
+
+  .top-image {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 800;
+  }
+
+  .image-detail {
+    width: 100%;
+    height: 400px;
+  }
+
 
 }
 
