@@ -2,7 +2,6 @@
   <div class="not-found-container">
 
     <div class="not-found-title">
-      404 NOT FOUND
       ご指定のページは見つかりませんでした。
     </div>
   </div>
@@ -12,6 +11,9 @@
 
 
 .not-found-container {
+  padding-top: 250px;
+  padding-bottom: 250px;
+  text-align: center;
   width: 1000px;
   margin: auto;
   height: 100%;

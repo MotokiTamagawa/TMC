@@ -50,5 +50,21 @@ export default {
   padding: 0;
 }
 
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+
+  .router-view {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+}
+
 
 </style>

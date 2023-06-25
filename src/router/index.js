@@ -3,7 +3,9 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import PolicyView from '../views/PolicyView.vue'
 import ContactView from '../views/ContactView.vue'
-import ContactConfirm from '../views/ContactConfirm.vue'
+import ContactComplete from '../views/ContactComplete.vue'
+
+import Sample from '../components/HumSample.vue'
 
 import NotFound from '../views/NotFound.vue'
 
@@ -39,13 +41,17 @@ const router = new VueRouter({
       component: ContactView
     },
     {
-      path: '/contact_confirm',
-      name: 'contact_confirm',
-      component: ContactConfirm
+      path: '/contact_complete',
+      name: 'contact_complete',
+      component: ContactComplete
     },
     {
       path: '/:pathMatch(.*)',
       component: NotFound
+    },
+    {
+      path: '/sample',
+      component: Sample
     },
   ]
 })

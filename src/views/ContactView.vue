@@ -61,8 +61,11 @@
             style="width: 90%; height: 30px;"
           >
             <option>相続関係</option>
+            <option>成年後見関係</option>
             <option>土地関係</option>
             <option>建設業関係</option>
+            <option>産業廃棄物関係</option>
+            <option>会社設立など各種申請</option>
             <option>外国人関係</option>
             <option>その他</option>
           </select>
@@ -156,6 +159,9 @@ export default {
       emailjs.sendForm('service_fvmdxbf', 'template_rayolea', this.$refs.form,'4ZdXe1K6Ok5Ksc2P6')
         .then((result) => {
             console.log('SUCCESS!', result.text);
+
+            this.$router.push('/contact_complete');
+
         }, (error) => {
             console.log('FAILED...', error.text);
         });
@@ -319,5 +325,106 @@ input[type=submit]:hover {
   padding: 20px;
   color: rgb(255, 126, 126);
 }
+
+@media screen and (max-width: 800px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+
+  label {
+    float: left;
+  }
+
+  input[type=text], [type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .contact-container {
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    font-family:serif;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .contents-title-container {
+    padding-bottom: 30px;
+  }
+
+  .contents-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.sub-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+  .annotetion {
+    font-size: 10px;
+    color: rgb(136, 136, 136);
+  }
+
+  .contact-contents {
+    width: 100%;
+    margin: auto;
+  }
+
+  .input-form {
+    position: relative;
+    padding: 15px 10px;
+  }
+
+  .contents-error {
+    position: absolute;
+    top: 85px;
+    left: 30px;
+    font-size: 12px;
+    color: rgb(255, 126, 126);
+  }
+
+  .item-error {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    font-size: 12px;
+    color: rgb(255, 126, 126);
+  }
+
+  .message-error {
+    position: absolute;
+    top: 350px;
+    left: 30px;
+    font-size: 12px;
+    color: rgb(255, 126, 126);
+  }
+
+  .errorMessage {
+    padding: 20px;
+    color: rgb(255, 126, 126);
+  }
+}
+
+
 
 </style>

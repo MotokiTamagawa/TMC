@@ -1,16 +1,16 @@
 
 <template>
-  <div class="policy-container">
+  <div class="policy-container" id="policy">
 
     <div class="contents-title-container">
       <div class="contents-title">プライバシーポリシー</div>
     </div>
 
-    <h1>
+    <h2>
       個人情報の保護に関する基本方針
-    </h1>
+    </h2>
     <p>
-      川本行政書士事務所は、業務で知り得た、個人を識別できる情報 （個人情報）を適切に取り扱うことを、社会的責務であると深く認識し、下記の各項に基づいてお客様の個人情報を保護し、尊重することをお約束します。
+      行政書士寺町久徳事務所は、業務で知り得た、個人を識別できる情報 （個人情報）を適切に取り扱うことを、社会的責務であると深く認識し、下記の各項に基づいてお客様の個人情報を保護し、尊重することをお約束します。
     </p>
 
     <h2>
@@ -18,7 +18,7 @@
     </h2>
 
     <p>
-    本個人情報の保護に関する基本方針は、川本行政書士事務所（以下「当事務所」といいます。）が収集し利用する全ての個人情報をその対象として、当事務所の個人情報保護に関する基本的な考え方をご説明するものです。
+    本個人情報の保護に関する基本方針は、行政書士寺町久徳事務所（以下「当事務所」といいます。）が収集し利用する全ての個人情報をその対象として、当事務所の個人情報保護に関する基本的な考え方をご説明するものです。
     </p>
 
   <h2>個人情報の利用目的</h2>
@@ -27,7 +27,6 @@
   当事務所は、以下の範囲を超えて個人情報を取り扱うことはいたしません。<br>
 
   ・お客様のご相談及びご依頼内容の対応に必要な情報収集<br>
-  ・お客様の本人確認のため運転免許証や、健康保険証等の各種証明書の写しを請求する場合<br>
   ・当事務所が提供するサービスの向上のためアンケートや新しいサービスに関するお知らせをする場合<br>
 </p>
 
@@ -66,8 +65,8 @@
   padding-bottom: 50px;
   text-align: left;
   font-family:serif;
-
 }
+
 .contents-title-container {
   padding-bottom: 50px;
   text-align: center;
@@ -86,6 +85,39 @@
 .sub-title {
   font-size: 20px;
   font-weight: bold;
+}
+@media screen and (max-width: 800px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+
+  .policy-container {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    text-align: left;
+    font-family:serif;
+    font-size: 13px;
+    margin: 20px;
+  }
+
+  .contents-title-container {
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  .field-contents {
+    padding-bottom: 50px;
+  }
+
+  .contents-title {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+
+  .sub-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
 }
 
 
