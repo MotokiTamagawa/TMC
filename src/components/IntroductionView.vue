@@ -12,7 +12,7 @@
     <div class='introduction-section' :class="{fadeIn:visible}" v-show="visible">
 
       <div class="picture-wrapper">
-        <img src="src/assets/images/IMG_0714.jpg" class="picture-detail">
+        <img src="../assets/images/IMG_0714.jpg" class="picture-detail">
       </div>
 
       <div class="greeting-container">
