@@ -12,7 +12,7 @@
     <div class='introduction-section' :class="{fadeIn:visible}" v-show="visible">
 
       <div class="picture-wrapper">
-        写真
+        <img src="src/assets/images/IMG_0714.jpg" class="picture-detail">
       </div>
 
       <div class="greeting-container">
@@ -126,10 +126,15 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
 }
 
 .picture-wrapper {
   width: 500px;
+}
+
+.picture-detail {
+  width: 80%;
 }
 
 .greeting-container {
@@ -215,7 +220,9 @@ export default {
   }
 
   .greeting-container {
-    width: 100%;
+    padding-top: 10px;
+    width: 90%;
+    margin: auto;
     text-align: left;
     line-height: 23px;
     font-size: 15px;
