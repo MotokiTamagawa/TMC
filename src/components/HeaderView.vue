@@ -164,11 +164,11 @@ export default {
         this.$router.go();
       },
       scrollFlagChange() {
-        console.log('フラグ変える');
+        // console.log('フラグ変える');
 
         this.$store.dispatch('chengeScrollFlag');
 
-        console.log(this.$store.getters.getScrollFlag);
+        // console.log(this.$store.getters.getScrollFlag);
       },
     },
     ActiveBtnClose(){

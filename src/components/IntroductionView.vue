@@ -17,10 +17,10 @@
 
       <div class="greeting-container">
         <div class="greeting-title">【ご挨拶】</div>
-        行政書士寺町久徳事務所の寺町です。<br>
-        日本も高齢化社会を迎え、相続手続き、空家・農地等不動産の処分、成年後見制度の必要性など、ご家族に関する悩みも多種多様になりました。<br>
+        行政書士寺町久徳事務所の特定行政書士 寺町です。<br>
+        日本も高齢化社会を迎え、相続手続き、空家・農地等不動産の処分、成年後見制度の必要性など、ご家族の悩みも多種多様になりました。<br>
         小職は遺言・成年後見制度の相談から、相続開始後の財産調査・遺産分割協議書作成など幅広く相続関係の相談に対応してきました。<br>
-        また、兼業で不動産業の登録もありますので、不動産の処分についても対応することができますし、墓じまい等の助言・紹介なども必要に合わせて対応可能です。<br>
+        また、兼業で宅建業、愛電（株）の登録もありますので、不動産の処分についても対応することができますし、墓じまい等の助言・紹介なども必要に合わせて対応可能です。<br>
         これら相続に関しては、被相続人・相続人の皆様が現在から将来に向けて安心して相続手続きができるように努めてまいります。<br>
         また、建設業・産業廃棄物の許可申請や、一般的な各種申請・書類作成なども幅広くサポートさせて頂きます。<br><br>
 
@@ -43,7 +43,6 @@ export default {
   watch:{
     '$store.state.scrollFlag'(scrollFlag) {
       if (scrollFlag == false) {
-        console.log(scrollFlag);
         this.visible=true;
       }
     }
@@ -62,12 +61,12 @@ export default {
       if (this.visible == false) {
         if (window.innerWidth <= 800) {
           // スマートフォンの処理
-          if (!this.visible && window.scrollY > 1830) {
+          if (!this.visible && window.scrollY > 2650) {
             this.visible = true;
           }
         } else {
           // PC
-          if (!this.visible && window.scrollY > 2600) {
+          if (!this.visible && window.scrollY > 3600) {
             this.visible = true;
           }
         }
@@ -224,7 +223,7 @@ export default {
     width: 90%;
     margin: auto;
     text-align: left;
-    line-height: 23px;
+    line-height: 27px;
     font-size: 15px;
   }
 
