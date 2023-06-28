@@ -297,6 +297,10 @@ input[type=submit]:hover {
   padding: 15px 0px;
 }
 
+.input-form label {
+  font-weight: bold;
+}
+
 .contents-error {
   position: absolute;
   top: 85px;

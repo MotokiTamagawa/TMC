@@ -67,6 +67,10 @@
   font-family:serif;
 }
 
+#policy {
+  margin: 0 20px;
+}
+
 .contents-title-container {
   padding-bottom: 50px;
   text-align: center;
@@ -86,6 +90,7 @@
   font-size: 20px;
   font-weight: bold;
 }
+
 @media screen and (max-width: 800px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
 
