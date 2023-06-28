@@ -42,6 +42,7 @@
 
 .contact-contents {
   padding-bottom: 50px;
+  font-weight: bold;
 }
 
 .contents-title {
@@ -74,6 +75,17 @@
   padding: 5px 80px;
   font-size: 17px;
   height: 50px;
+  background-color: rgb(203, 203, 203);
+}
+
+.phone:hover {
+  border: 1px solid #000000;
+  background-color: rgb(130, 130, 130);
+  padding: 5px 80px;
+  font-size: 17px;
+  height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .mail {
@@ -99,10 +111,6 @@
 a {
   text-decoration: none;
   color: #000000;
-}
-
-a:hover{
-  color: rgb(133, 133, 133);
 }
 
 

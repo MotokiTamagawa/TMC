@@ -156,7 +156,7 @@ export default {
       console.log(this.message);
 
 
-      emailjs.sendForm('service_fvmdxbf', 'template_rayolea', this.$refs.form,'4ZdXe1K6Ok5Ksc2P6')
+      emailjs.sendForm('service_uy8kikp', 'template_rayolea', this.$refs.form,'4ZdXe1K6Ok5Ksc2P6')
         .then((result) => {
             console.log('SUCCESS!', result.text);
 
