@@ -27,7 +27,8 @@
           </div>
         </div>
 
-        <router-link :to="'/policy'" class="policy" v-scroll-to="'#policy'">
+        <br>
+        <router-link :to="'/policy'" class="policy" v-scroll-to="'#policy'" >
           プライバシーポリシー
         </router-link>
       </div>
@@ -103,6 +104,7 @@
   color: black;
   text-align: left;
   font-size: 14px;
+  border-bottom: 1px solid #979797;
 }
 
 a:hover {
@@ -188,7 +190,9 @@ a:hover {
     color: black;
     text-align: left;
     font-size: 14px;
+    border-bottom: 1px solid #979797;
   }
+  
 
   a:hover {
     color: rgb(133, 133, 133);

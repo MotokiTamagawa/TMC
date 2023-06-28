@@ -73,6 +73,10 @@
     </div>
 
 
+
+
+
+    <!-- SP -->
     <div class="sp-field-contents">
       <div class="sp-field-content" :class="{fadeIn:visible}" v-show="visible">
         <hr>
@@ -82,7 +86,7 @@
         <div class="sp-content-image">
           <img src="../assets/images/inheritance.jpg" class="sp-content-image-detail">
         </div>
-        <p>相続関係説明図作成、遺産分割協議書作成、<br>遺言書の起案・作成など</p>
+        <p>遺言・遺産分割協議書作成・相続財産調査など</p>
       </div>
 
       <div class="sp-field-content" :class="{fadeIn1:visible1}" v-show="visible1">
