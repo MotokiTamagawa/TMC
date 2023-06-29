@@ -26,7 +26,7 @@
         </div>
         <div class="content-title">
           成年後見関係
-          <p>(一社)コスモス成年後見サポートセンター会員</p>
+          <p><a href="https://www.cosmos-sc.or.jp/">(一社)コスモス成年後見サポートセンター会員</a></p>
         </div>
       </div>
 
@@ -428,6 +428,15 @@ export default {
 
 .attention-wrapper span{
   font-weight: bold;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(133, 133, 133);
 }
 
 /* フェードイン */
