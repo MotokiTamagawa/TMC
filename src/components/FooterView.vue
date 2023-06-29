@@ -14,16 +14,16 @@
         <div class="other-links">
           <h5>関連サイト</h5>
           <div>
-            <a href="https://www.gyosei.or.jp/">日本行政書士会連合</a>
+            <a href="https://www.gyosei.or.jp/"  target="_blank">日本行政書士会連合</a>
           </div>
           <div>
-            <a href="https://www.e-gyosei.or.jp/">愛媛県行政書士会</a>
+            <a href="https://www.e-gyosei.or.jp/"  target="_blank">愛媛県行政書士会</a>
           </div>
           <div>
-            <a href="https://www.cosmos-sc.or.jp/">コスモス成年後見サポートセンター</a>
+            <a href="https://www.cosmos-sc.or.jp/"  target="_blank">コスモス成年後見サポートセンター</a>
           </div>
           <div>
-            <a href="https://www.zentaku.or.jp/">全宅連</a>
+            <a href="https://www.zentaku.or.jp/"  target="_blank">全宅連</a>
           </div>
         </div>
 
