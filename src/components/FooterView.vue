@@ -20,7 +20,7 @@
             <a href="https://www.e-gyosei.or.jp/">愛媛県行政書士会</a>
           </div>
           <div>
-            <a href="https://www.cosmos-sc.or.jp/">コスモ成年後見サポートセンター</a>
+            <a href="https://www.cosmos-sc.or.jp/">コスモス成年後見サポートセンター</a>
           </div>
           <div>
             <a href="https://www.zentaku.or.jp/">全宅連</a>
@@ -192,7 +192,7 @@ a:hover {
     font-size: 14px;
     border-bottom: 1px solid #979797;
   }
-  
+
 
   a:hover {
     color: rgb(133, 133, 133);
