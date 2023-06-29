@@ -5,7 +5,6 @@ import PolicyView from '../views/PolicyView.vue'
 import ContactView from '../views/ContactView.vue'
 import ContactComplete from '../views/ContactComplete.vue'
 
-import Sample from '../components/HumSample.vue'
 
 import NotFound from '../views/NotFound.vue'
 
@@ -48,11 +47,7 @@ const router = new VueRouter({
     {
       path: '/:pathMatch(.*)',
       component: NotFound
-    },
-    {
-      path: '/sample',
-      component: Sample
-    },
+    }
   ]
 })
 

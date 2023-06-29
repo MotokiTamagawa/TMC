@@ -7,7 +7,7 @@
       <hr>
     </div>
 
-    <div class="top-name">行政書士：寺町久徳</div>
+    <div class="top-name">寺町久徳</div>
 
     <div class='introduction-section' :class="{fadeIn:visible}" v-show="visible">
 

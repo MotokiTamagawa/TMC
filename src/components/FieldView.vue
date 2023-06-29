@@ -26,7 +26,7 @@
         </div>
         <div class="content-title">
           成年後見関係
-          <p>(一社)コスモス成年後見サポートセンター会員</p>
+          <p><a href="https://www.cosmos-sc.or.jp/"  target="_blank">(一社)コスモス成年後見サポートセンター会員</a></p>
         </div>
       </div>
 
@@ -68,6 +68,7 @@
         <div class="content-title">
           外国人関係
           <p>在留資格取得、変更申請、帰化申請など</p>
+          <p>＊申請取次行政書士届出済</p>
         </div>
       </div>
     </div>
@@ -97,7 +98,7 @@
         <div class="sp-content-image">
           <img src="../assets/images/AdobeStock_201589914-min.jpeg" class="sp-content-image-detail">
         </div>
-        <p>(一社)コスモス成年後見サポートセンター会員</p>
+        <p><a href="https://www.cosmos-sc.or.jp/" target="_blank">(一社)コスモス成年後見サポートセンター会員</a></p>
       </div>
 
 
@@ -144,6 +145,7 @@
         </div>
 
         <p>在留資格取得、変更申請、帰化申請など</p>
+        <p>＊申請取次行政書士届出済</p>
       </div>
       <br><br>
 
@@ -428,6 +430,18 @@ export default {
 
 .attention-wrapper span{
   font-weight: bold;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid #000000;
+  padding-bottom: 4px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(130, 130, 130);
+  border-bottom: 1px solid rgb(130, 130, 130);
 }
 
 /* フェードイン */
