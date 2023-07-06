@@ -425,7 +425,7 @@ a:hover {
     border-radius: 20px;
     border-bottom: none;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
 
   .to-contact a:hover{
@@ -434,7 +434,7 @@ a:hover {
     border-radius: 20px;
     border-bottom: none;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
 
   .to-top{
