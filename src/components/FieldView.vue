@@ -53,9 +53,19 @@
           </div>
           <div class="content-title">
             成年後見関係
-            <p><a href="https://www.cosmos-sc.or.jp/"  target="_blank">(一社)コスモス成年後見サポートセンター会員</a></p>
+            <p>(一社)コスモス成年後見サポートセンター会員</p>
           </div>
         </div>
+        <Accordion>
+          <div slot="title">詳しくはこちら</div>
+          <div slot="close">閉じる</div>
+          <div class="sp-content" slot="content">
+            <p>
+              成年後見関係につきましては、コスモス成年後見関係サポートセンターのホームページより詳細のご確認をお願い致します。<br><br>
+              <p><a href="https://www.cosmos-sc.or.jp/"  target="_blank">(一社)コスモス成年後見サポートセンター</a></p>
+            </p>
+          </div>
+        </Accordion>
         <hr>
       </div>
 
@@ -208,7 +218,17 @@
         <div class="sp-content-image">
           <img src="../assets/images/AdobeStock_201589914-min.jpeg" class="sp-content-image-detail">
         </div>
-        <p><a href="https://www.cosmos-sc.or.jp/" target="_blank">(一社)コスモス成年後見サポートセンター会員</a></p>
+        <p>(一社)コスモス成年後見サポートセンター会員</p>
+        <Accordion>
+          <div slot="title">詳しくはこちら</div>
+          <div slot="close">閉じる</div>
+          <div class="sp-content" slot="content">
+            <p>
+              成年後見関係につきましては、<br>コスモス成年後見関係サポートセンターのホームページより詳細のご確認をお願い致します。<br><br>
+              <p><a href="https://www.cosmos-sc.or.jp/"  target="_blank">(一社)コスモス成年後見サポートセンター</a></p>
+            </p>
+          </div>
+        </Accordion>
       </div>
 
 
