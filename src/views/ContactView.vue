@@ -97,6 +97,10 @@
 
       </form>
 
+      <div class="to-top">
+        <router-link :to="'/'">戻る</router-link>
+      </div>
+
     </div>
 
 
@@ -250,9 +254,9 @@ input[type=text], [type=email], textarea {
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
-  padding: 12px 20px;
+  padding: 20px 30px;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
@@ -330,6 +334,19 @@ input[type=submit]:hover {
   color: rgb(255, 126, 126);
 }
 
+.to-top{
+  padding-top: 50px;
+}
+
+.to-top a{
+  background-color: rgb(223, 223, 223);
+  padding: 10px;
+  border-radius: 20px;
+  border-bottom: none;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
 @media screen and (max-width: 800px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
 
@@ -351,9 +368,9 @@ input[type=submit]:hover {
   input[type=submit] {
     background-color: #4CAF50;
     color: white;
-    padding: 12px 20px;
+    padding: 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
   }
 
@@ -426,6 +443,20 @@ input[type=submit]:hover {
   .errorMessage {
     padding: 20px;
     color: rgb(255, 126, 126);
+  }
+
+  .to-top a{
+    background-color: rgb(223, 223, 223);
+    padding: 10px;
+    border-radius: 20px;
+    border-bottom: none;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+
+
+  a:hover {
+    color: rgb(130, 130, 130);
   }
 }
 

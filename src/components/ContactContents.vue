@@ -113,12 +113,7 @@ a {
   color: #000000;
 }
 
-
-@media screen and (max-width: 959px) {
-	/* 959px以下に適用されるCSS（タブレット用） */
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
 
   .contact-contents-container {
@@ -162,6 +157,17 @@ a {
     padding: 5px 5px;
     font-size: 17px;
     height: 50px;
+  }
+
+  .phone:hover {
+    border: 1px solid #000000;
+    background-color: rgb(130, 130, 130);
+    font-size: 17px;
+    height: 50px;
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mail {

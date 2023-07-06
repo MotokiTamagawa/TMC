@@ -5,6 +5,9 @@ import PolicyView from '../views/PolicyView.vue'
 import ContactView from '../views/ContactView.vue'
 import ContactComplete from '../views/ContactComplete.vue'
 
+import PriceTable from '../views/PriceTable.vue'
+
+
 
 import NotFound from '../views/NotFound.vue'
 
@@ -43,6 +46,11 @@ const router = new VueRouter({
       path: '/contact_complete',
       name: 'contact_complete',
       component: ContactComplete
+    },
+    {
+      path: '/price_table',
+      name: 'price_table',
+      component: PriceTable
     },
     {
       path: '/:pathMatch(.*)',
