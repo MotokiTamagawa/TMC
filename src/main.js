@@ -7,11 +7,13 @@ import router from './router'
 import VueScrollTo from 'vue-scrollto';
 import  Slide  from 'vue-burger-menu'
 
+import HTTP from './modules/axios'
+
 import './assets/main.css'
 
 Vue.config.productionTip = false;
 
-
+Vue.use(HTTP);
 Vue.use(Vuex);
 
 const store = new Vuex.Store({

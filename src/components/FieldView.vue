@@ -177,7 +177,6 @@
     <!-- SP -->
     <div class="sp-field-contents">
       <div class="sp-field-content" :class="{fadeIn:visible}" v-show="visible">
-        <hr>
         <div class="sp-content-title">
           相続関係
         </div>
