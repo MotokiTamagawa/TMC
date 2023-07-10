@@ -2,6 +2,7 @@
 
   <div class="home-container">
     <TopView/>
+    <BlogView/>
     <FieldView/>
     <IntroductionView/>
     <CorporateView/>
@@ -14,6 +15,7 @@
 <script lang="js">
 
 import TopView from '../components/TopView.vue'
+import BlogView from '../components/BlogView.vue';
 import FieldView from '../components/FieldView.vue';
 import IntroductionView from '../components/IntroductionView.vue'
 import CorporateView from '../components/CorporateView.vue';
@@ -25,6 +27,7 @@ import FadeIn from '../components/FieldView.vue'
 export default {
   components: {
     TopView,
+    BlogView,
     FieldView,
     IntroductionView,
     CorporateView,

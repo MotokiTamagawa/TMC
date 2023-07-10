@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "axios": "^1.4.0",
     "vue": "^2.7.7",
     "vue-burger-menu": "^2.0.5",
     "vue-router": "^3.5.4",
