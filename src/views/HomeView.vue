@@ -2,9 +2,9 @@
 
   <div class="home-container">
     <TopView/>
-    <BlogView/>
     <FieldView/>
     <IntroductionView/>
+    <BlogView/>
     <CorporateView/>
     <ContactContents/>
   </div>
