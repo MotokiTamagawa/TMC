@@ -7,12 +7,14 @@
     </div>
 
     <div class="news-contents">
+      <iframe class="note-embed" src="https://note.com/embed/notes/n02e518fb6c94" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="630px"></iframe>
+      <iframe class="note-embed" src="https://note.com/embed/notes/n8c5774ba7790" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="400px"></iframe>
       <iframe class="note-embed" src="https://note.com/embed/notes/n1fe25fcece38" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="600px"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/nb7376681b560" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="600px"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/na9643ea61187" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="auto"></iframe>
       <div v-if="!this.more" @click="showMore" style="margin: 30px 0px ;"><span class="btn">他の記事も見る</span></div>
 
       <div v-if="this.more">
+        <iframe class="note-embed" src="https://note.com/embed/notes/nb7376681b560" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="600px"></iframe>
+        <iframe class="note-embed" src="https://note.com/embed/notes/na9643ea61187" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="auto"></iframe>
         <iframe class="note-embed" src="https://note.com/embed/notes/n42ccadfcd516" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="auto"></iframe>
         <iframe class="note-embed" src="https://note.com/embed/notes/ne5f514b38a99" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="auto"></iframe>
         <iframe class="note-embed" src="https://note.com/embed/notes/n318a6a4c142e" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="auto"></iframe>
@@ -24,15 +26,17 @@
     </div>
 
     <div class="sp-news-contents">
+      <iframe class="note-embed" src="https://note.com/embed/notes/n02e518fb6c94" style="border: 0; display: block; max-width: 100%; width: 100%; padding-bottom: 20px; margin: auto; position: static; visibility: visible;" height="610"></iframe>
+      <iframe class="note-embed" src="https://note.com/embed/notes/n8c5774ba7790" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="330"></iframe>
       <iframe class="note-embed" src="https://note.com/embed/notes/n1fe25fcece38" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="400"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/nb7376681b560" style="border: 0; display: block; max-width: 100%; width: 100%; padding-bottom: 20px; margin: auto; position: static; visibility: visible;" height="600"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/na9643ea61187" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="200"></iframe>
 
       <div v-if="!this.more" @click="showMore" style="margin: 30px 0px ;"><span class="btn">他の記事も見る</span></div>
       <div v-if="this.more">
-        <iframe class="note-embed" src="https://note.com/embed/notes/n42ccadfcd516" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="200"></iframe>
-        <iframe class="note-embed" src="https://note.com/embed/notes/ne5f514b38a99" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="200"></iframe>
-        <iframe class="note-embed" src="https://note.com/embed/notes/n318a6a4c142e" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="200"></iframe>
+        <iframe class="note-embed" src="https://note.com/embed/notes/nb7376681b560" style="border: 0; display: block; max-width: 100%; width: 100%; padding-bottom: 20px; margin: auto; position: static; visibility: visible;" height="630"></iframe>
+        <iframe class="note-embed" src="https://note.com/embed/notes/na9643ea61187" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="180"></iframe>
+        <iframe class="note-embed" src="https://note.com/embed/notes/n42ccadfcd516" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="180"></iframe>
+        <iframe class="note-embed" src="https://note.com/embed/notes/ne5f514b38a99" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="180"></iframe>
+        <iframe class="note-embed" src="https://note.com/embed/notes/n318a6a4c142e" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="180"></iframe>
         <br>
         <div @click="showMore"><spna class="btn" style="margin: 60px 0px;">閉じる</spna></div>
       </div>
