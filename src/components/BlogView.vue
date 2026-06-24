@@ -42,16 +42,18 @@ const loading = ref(true);
 const error = ref(null);
 const fetchNoteArticles = async () => {
   try {
-    // 💡 自分のドメイン（/api-note）に向けてリクエストを投げる
-    const response = await fetch('/api-note/api/v2/creators/teramachi_office/contents?kind=note&page=1');
+    const response = await fetch('/api/note');
+
     if (!response.ok) {
-      throw new Error('データの取得に失敗しました');
+      throw new Error(`HTTP Error: ${response.status}`);
     }
+
     const json = await response.json();
+
     articles.value = json.data.contents;
   } catch (err) {
     error.value = err.message;
-    console.log(error.value)
+    console.error(err);
   } finally {
     loading.value = false;
   }

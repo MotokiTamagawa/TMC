@@ -20,10 +20,14 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api-note': {
+      '/api': {
         target: 'https://note.com',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-note/, '')
+        rewrite: (path) =>
+          path.replace(
+            /^\/api\/note/,
+            '/api/v2/creators/teramachi_office/contents?kind=note&page=1'
+          )
       }
     }
   }
