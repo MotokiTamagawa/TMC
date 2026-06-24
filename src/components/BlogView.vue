@@ -5,72 +5,69 @@
       <span class="sub-title">お知らせ/ブログ</span>
       <hr>
     </div>
+    <!-- ローディング表示 -->
+    <div v-if="loading" class="loading">読み込み中...</div>
+    <div v-else class="article-grid">
+      <div v-for="article in articles" :key="article.id" class="article-card">
+        <!-- 💡 画像の表示 (eyecatchがある場合のみ) -->
+        <div class="thumbnail-wrapper" v-if="article.eyecatch">
+          <img :src="article.eyecatch" :alt="article.name" class="thumbnail" />
+        </div>
 
-    <div class="news-contents">
-      <iframe class="note-embed" src="https://note.com/embed/notes/nf6f80db4d9cf" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="320px"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/n188cfda38543" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="630px"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/n02e518fb6c94" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="630px"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/n8c5774ba7790" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="400px"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/n1fe25fcece38" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="600px"></iframe>
-      <div v-if="!this.more" @click="showMore" style="margin: 30px 0px ;"><span class="btn">他の記事も見る</span></div>
-
-      <div v-if="this.more">
-        <iframe class="note-embed" src="https://note.com/embed/notes/nb7376681b560" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="600px"></iframe>
-        <iframe class="note-embed" src="https://note.com/embed/notes/na9643ea61187" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="auto"></iframe>
-        <iframe class="note-embed" src="https://note.com/embed/notes/n42ccadfcd516" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="auto"></iframe>
-        <iframe class="note-embed" src="https://note.com/embed/notes/ne5f514b38a99" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="auto"></iframe>
-        <iframe class="note-embed" src="https://note.com/embed/notes/n318a6a4c142e" style="border: 0; display: block; max-width: 99%; width: 700px; padding: 0px; margin: 20px auto; position: static; visibility: visible;" height="auto"></iframe>
-        <br>
-        <div @click="showMore"><spna class="btn" style="margin: 60px 0px;">閉じる</spna></div>
+        <div class="content">
+          <h3>
+            <a :target="'_blank'" :href="article.noteUrl">{{ article.name }}</a>
+          </h3>
+          <p class="date">公開日: {{ formatDate(article.publishAt) }}</p>
+        </div>
       </div>
-      <br>
-      <hr>
     </div>
 
-    <div class="sp-news-contents">
-      <iframe class="note-embed" src="https://note.com/embed/notes/nf6f80db4d9cf" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="400"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/n188cfda38543" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="400"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/n02e518fb6c94" style="border: 0; display: block; max-width: 100%; width: 100%; padding-bottom: 20px; margin: auto; position: static; visibility: visible;" height="610"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/n8c5774ba7790" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="330"></iframe>
-      <iframe class="note-embed" src="https://note.com/embed/notes/n1fe25fcece38" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="400"></iframe>
-
-      <div v-if="!this.more" @click="showMore" style="margin: 30px 0px ;"><span class="btn">他の記事も見る</span></div>
-      <div v-if="this.more">
-        <iframe class="note-embed" src="https://note.com/embed/notes/nb7376681b560" style="border: 0; display: block; max-width: 100%; width: 100%; padding-bottom: 20px; margin: auto; position: static; visibility: visible;" height="630"></iframe>
-        <iframe class="note-embed" src="https://note.com/embed/notes/na9643ea61187" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="180"></iframe>
-        <iframe class="note-embed" src="https://note.com/embed/notes/n42ccadfcd516" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="180"></iframe>
-        <iframe class="note-embed" src="https://note.com/embed/notes/ne5f514b38a99" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="180"></iframe>
-        <iframe class="note-embed" src="https://note.com/embed/notes/n318a6a4c142e" style="border: 0; display: block; max-width: 100%; width: 100%; padding: 0px; margin: auto; position: static; visibility: visible;" height="180"></iframe>
-        <br>
-        <div @click="showMore"><spna class="btn" style="margin: 60px 0px;">閉じる</spna></div>
-      </div>
-      <br>
-      <hr>
+    <div v-if="!loading && !error" class="more-button-container">
+      <a
+        href="https://note.com/teramachi_office/all"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="more-button"
+      >
+        全ての記事を見る
+      </a>
     </div>
-
   </div>
 </template>
-
-
-<script>
-
-export default {
-  data() {
-    return{
-      more: false
+<script setup>
+import { ref, onMounted } from 'vue';
+const articles = ref([]);
+const loading = ref(true);
+const error = ref(null);
+const fetchNoteArticles = async () => {
+  try {
+    // 💡 自分のドメイン（/api-note）に向けてリクエストを投げる
+    const response = await fetch('/api-note/api/v2/creators/teramachi_office/contents?kind=note&page=1');
+    if (!response.ok) {
+      throw new Error('データの取得に失敗しました');
     }
-  },
-  methods: {
-    showMore () {
-      this.more = !this.more
-    }
+    const json = await response.json();
+    articles.value = json.data.contents;
+  } catch (err) {
+    error.value = err.message;
+    console.log(error.value)
+  } finally {
+    loading.value = false;
   }
-}
-
+};
+// 日付のフォーマットを整える便利関数
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('ja-JP');
+};
+onMounted(() => {
+  fetchNoteArticles();
+});
 </script>
-
-
 <style scoped>
+
+
 
 .blog-container {
   padding-top: 100px;
@@ -100,46 +97,89 @@ export default {
   font-weight: bold;
   color:black;
 }
-.news-contents {
-  margin: auto;
+
+
+.note-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.article-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+.thumbnail-wrapper {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 縦横比を維持して枠いっぱいに表示 */
+}
+.content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+.content a {
+  color: #333;
+  text-decoration: none;
+}
+.content a:hover {
+  text-decoration: underline;
+}
+.date, .likes {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 5px 0 0 0;
+}
+.loading, .error {
   text-align: center;
-  width: 1000px;
+  padding: 40px;
+  font-size: 1.2rem;
+}
+.error { color: red; }
+
+
+
+.more-button-container {
+  margin-top: 40px;
+  text-align: center;
 }
 
-.btn {
-  background-color: rgb(223, 223, 223);
-  padding: 10px;
-  border-radius: 20px;
-  font-size: 20px;
-  cursor: pointer;
+.more-button {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 1px solid #000;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
 }
 
-.btn:hover {
-  color: rgb(133, 133, 133);
+.more-button:hover {
+  background-color: #000;
+  color: #fff;
 }
-
-.p-noteEmbed  {
-  margin: 0;
-}
-
-.sp-news-contents {
-  display: none;
-}
-
-@media screen and (max-width: 800px) {
-	/* 480px以下に適用されるCSS（スマホ用） */
-
-  .news-contents {
-    display: none;
-  }
-
-  .sp-news-contents {
-    display: block;
-  }
-
-
-
-}
-
 
 </style>
